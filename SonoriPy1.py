@@ -45,15 +45,15 @@ def sonoripy(word):
         if letter.lower() in vowels:
             sylset.append((letter, 5))
             vowelcount += 1  # to check for monosyllabic words
-        if letter.lower() in approximates:
+        elif letter.lower() in approximates:
             sylset.append((letter, 4))
-        if letter.lower() in nasals:
+        elif letter.lower() in nasals:
             sylset.append((letter, 3))
-        if letter.lower() in fricatives:
+        elif letter.lower() in fricatives:
             sylset.append((letter, 2))
-        if letter.lower() in affricates:
+        elif letter.lower() in affricates:
             sylset.append((letter, 1))
-        if letter.lower() in stops:
+        elif letter.lower() in stops:
             sylset.append((letter, 0))
 
     # below actually divides the syllables
