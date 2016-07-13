@@ -55,6 +55,8 @@ def sonoripy(word):
             sylset.append((letter, 1))
         elif letter.lower() in stops:
             sylset.append((letter, 0))
+        else:
+            sylset.append((letter, 0))
 
     # below actually divides the syllables
     newsylset = []
