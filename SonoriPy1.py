@@ -31,12 +31,13 @@ def sonoripy(word):
         return nss
 
     # SONORITY HIERARCHY, MODIFY FOR LANGUAGE BELOW
-    vowels = 'aeiouy'  # includes long vowels
+    # categories can be collapsed into more general groups
+    vowels = 'aeiouy'
     approximates = ''
-    nasals = 'lmnrw'  # resonants
-    fricatives = ''
+    nasals = 'lmnrw'  # resonants and nasals
+    fricatives = 'zvsf'
     affricates = ''
-    stops = '"bcdgtkpqvxhsfzj"'  # consonants
+    stops = 'bcdgtkpqxhj'  # rest of consonants
 
     vowelcount = 0  # if vowel count is 1, syllable is automatically 1
     sylset = []  # to collect letters and corresponding values
@@ -129,4 +130,4 @@ def sonoripy(word):
     return (newsylset)
 
 if __name__ == '__main__':
-    print(sonoripy("History"))
+    print(sonoripy("justification"))
